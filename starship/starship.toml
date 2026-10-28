@@ -1,0 +1,2 @@
+# Starship defaults (they already mirror the old zsh spaceship prompt). Add overrides here.
+"$schema" = "https://starship.rs/config-schema.json"

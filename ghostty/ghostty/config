@@ -1,0 +1,25 @@
+# Recreates the visual look of the iTerm2 "Default" profile (2026-07-24).
+# Colors extracted directly from that profile via `defaults read com.googlecode.iterm2`.
+
+font-family = JetBrainsMono Nerd Font
+font-size = 18
+
+background = #1F1F28
+foreground = #DCD7BA
+cursor-color = #C8C093
+cursor-text = #1D202F
+cursor-style = bar
+shell-integration-features = no-cursor
+selection-background = #2D4F67
+selection-foreground = cell-foreground
+
+background-image = /Users/konstantin/Desktop/Waifu/Lala_Deviluke_Anime.png
+background-image-fit = contain
+background-image-opacity = 0.25
+background-opacity = 0.88
+background-blur = true
+
+# Disables tabs (macOS enforces this when window-decoration = none, since
+# native tabbing requires the titlebar). Side effect: also removes the
+# titlebar/window frame (no close/minimize buttons, no edge-resize).
+window-decoration = none

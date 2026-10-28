@@ -7,8 +7,8 @@ return {
       "tpope/vim-fugitive",
     },
     keys = {
-      { "<leader>gfg", "<cmd>Flog<cr>", desc = "Flog Graph" },
-      { "<leader>gfs", "<cmd>Flogsplit<cr>", desc = "Flog Graph Split" },
+      -- { "<leader>gfg", "<cmd>Flog<cr>", desc = "Flog Graph" },
+      -- { "<leader>gfs", "<cmd>Flogsplit<cr>", desc = "Flog Graph Split" },
     },
   },
 }

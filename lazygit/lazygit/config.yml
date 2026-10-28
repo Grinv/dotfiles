@@ -1,0 +1,14 @@
+gui:
+  nerdFontsVersion: "3"
+  commitHashLength: 0
+  commitAuthorLongLength: 2
+
+git:
+  branchLogCmd: "git log --graph --color=always --pretty=format:'%C(auto)%h%C(auto)%d %s %C(dim white)(%aN, %ar)' {{branchName}} --"
+  allBranchesLogCmds:
+    - "git-graph --color always --style round --model simple --local --format '%h%d %s %an %ar' --wrap none --no-pager"
+  log:
+    showWholeGraph: true
+
+services:
+  "gitlab.infea.lectera.com": "gitlab:gitlab.infea.lectera.com"

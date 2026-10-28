@@ -17,13 +17,13 @@ local image = [[
 
 local logo = string.rep("\n", 5) .. image .. "\n\n"
 return {
-  {
-    "nvimdev/dashboard-nvim",
-    -- opts will be merged with the parent spec
-    opts = {
-      config = {
-        header = vim.split(logo, "\n"),
-      },
-    },
-  },
+  -- {
+  --   "nvimdev/dashboard-nvim",
+  --   -- opts will be merged with the parent spec
+  --   opts = {
+  --     config = {
+  --       header = vim.split(logo, "\n"),
+  --     },
+  --   },
+  -- },
 }

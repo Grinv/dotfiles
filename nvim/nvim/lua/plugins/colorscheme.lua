@@ -24,7 +24,11 @@ return {
     "LazyVim/LazyVim",
     opts = {
       colorscheme = "kanagawa",
-      -- colorscheme = "catppuccin",
+      transparent = true,
+      styles = {
+        sidebars = "transparent",
+        floats = "transparent",
+      },
     },
   },
 }

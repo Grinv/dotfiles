@@ -1,4 +1,4 @@
 ```sh
-brew install dotbot
-dotbot -c ./install.conf.yaml
+brew install stow
+stow -t ~/.config nvim
 ```
