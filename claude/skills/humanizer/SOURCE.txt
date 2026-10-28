@@ -1,0 +1,4 @@
+Source: https://github.com/blader/humanizer
+Commit: 0ef9fe5bc3572734fd3ae6c448fe00a30cd5dcf0 (2026-10-28), SKILL.md version 3.1.0
+Installed manually 2026-10-28 with Claude Code (reviewed: instructions only, no scripts).
+Update: re-copy SKILL.md from the repo. Remove: rm -rf ~/.claude/skills/humanizer

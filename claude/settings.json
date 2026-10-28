@@ -1,0 +1,31 @@
+{
+  "model": "opus",
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Agent",
+        "hooks": [
+          {
+            "type": "agent",
+            "prompt": "A subagent dispatch just returned. Dispatch and result: $ARGUMENTS\n\nIf tool_response shows an async dispatch (isAsync/status like \"async_launched\", with only an agentId/output-file pointer and no actual report content yet), allow immediately without comment — there is nothing to verify yet; the real check happens at SubagentStop once it actually finishes. Otherwise (a synchronous result with real content), check whether the subagent's final report is actually supported by what it did: does the summary match the tool calls/output in the result, does it look complete relative to what was asked, and does it avoid unsupported claims (e.g. claiming a file was edited, a test passed, or a search was exhaustive without evidence)? If something looks off, block with a concise explanation of the discrepancy. Otherwise allow.",
+            "timeout": 60,
+            "statusMessage": "Validating subagent result..."
+          }
+        ]
+      }
+    ],
+    "SubagentStop": [
+      {
+        "hooks": [
+          {
+            "type": "agent",
+            "prompt": "A subagent just finished. Its metadata: $ARGUMENTS\n\nRead the file at this JSON's `agent_transcript_path` (JSONL — one transcript event per line) to see what the subagent actually did: which tools it called and what those calls returned. Compare that against `last_assistant_message` (its final report to the dispatcher) and the task description in `background_tasks[].description`. Block, with a concise explanation naming the discrepancy, if the report claims something the transcript doesn't back up (an edit, a passed test, an exhaustive search) or is materially incomplete relative to what was asked. Otherwise allow.",
+            "timeout": 90,
+            "statusMessage": "Validating subagent result..."
+          }
+        ]
+      }
+    ]
+  },
+  "theme": "dark"
+}

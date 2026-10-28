@@ -1,0 +1,4 @@
+Source: https://github.com/DietrichGebert/ponytail (path skills/ponytail/SKILL.md), MIT
+Commit: 09c434ab73ca (2026-10-18); SKILL.md identical to upstream as of 2026-10-28.
+Installed manually (instructions only, no scripts).
+Update: re-copy skills/ponytail/SKILL.md from the repo.
